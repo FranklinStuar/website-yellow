@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap');
+body{
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(255, 204, 0, 0.5) 0%, rgba(255, 255, 255, 0.15));
+    color: #2E2C34;
+}
+/*BACKGROUND*/
+header{
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 750px;
+    background: linear-gradient(180deg, #fff, rgba(255, 255, 255, 0.15));
+    overflow: hidden;
+}
+header:before{
+    content: "";
+    position: absolute;
+    width: 200;
+    height: 200px;
+    background: linear-gradient(90deg, #57c589, #2f2591);
+    border-radius: 50%;
+    left: -10%;
+    bottom: -20%;
+    filter: blur(50px);
+}
+header:after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 400px;
+    background: linear-gradient(90deg, #9db44c, #c5aa10);
+    border-radius: 50%;
+    right: -10%;
+    bottom: -20%;
+    filter: blur(50vh);
+}
+.header{
+    max-width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255, 204, 0, 0.5) 0%, rgba(255, 255, 255, 0.15));
+    position: relative;
+    border: 1px solid linear-gradient(0deg, rgba(255, 204, 0, 0.5) 0%, rgba(255, 255, 255, 0.15));
+    border-radius: 10px;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    padding: 0 5%;
+}
+/*FIN BACKGROUND*/
+/*CARD FOR SERVICES HEADER*/
+.card-services
+{
+    width: 300px;
+    height: 600px;
+    background: linear-gradient(0deg, rgba(228, 234, 250, 0.5), #fcfdfd);
+    border-radius: 15px;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    /* border: 1px solid rgba(228, 234, 250, 0.5); */
+    backdrop-filter: blur(10px);
+    box-shadow: 
+        0px 10px 10px 3px rgba(255, 204, 0,0.1),
+        0 10px 80px -10px rgba(131, 125, 99, 0.2),
+        30px 15px 0 rgba(228, 234, 250, 0.5),
+        30px 18px 30px 3px rgba(255, 204, 0,0.1),
+        60px 30px 0 rgba(228, 234, 250, 0.5),
+        60px 33px 30px 3px rgba(255, 204, 0,0.1)
+        ;
+    animation: animation-card-services 3s linear infinite;
+}
+.card-services_item{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    background: #fff;
+    width: 300px;
+    padding: 15px 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-services_container-left{
+    margin-right: 20px;
+}
+.card-services_container-img{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b3b3fa;
+    border-radius: 50%;
+}
+.card-services_img{
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.card-services_title{
+    font-size: 16px;
+    color: #404042;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+.card-services_description{
+    font-size: 14x;
+    color: #69696b;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+.card-services_item--rigth{
+    left: 20px;
+    right: 0;
+}
+.card-services_item--2{
+    top: 140px;
+}
+.card-services_item--3{
+    top: 250px;
+}
+.card-services_item--4{
+    top: 360px;
+}
+.card-services_item--5{
+    top: 470px;
+}
+@keyframes item-service-left {
+    0%{
+        right: 0;
+        transform: scale(0.95);
+    }
+    15%,50%{
+        transform: scale(1);
+        right: 20px;
+    }
+    75%, 100%{
+        transform: scale(0.95);
+        right: 0;
+    }
+}
+@keyframes animation-card-services{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/*FIN CARD FOR SERVICES HEADER*/
+
+/*NAV*/
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-menu .left img{
+    height: 80px;
+}
+.header-menu .right .menu{
+    list-style: none;
+}
+.header-menu .right .menu li{
+    display: inline-block;
+}
+.header-menu .right .menu li a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #726B8C;
+    font-weight: 500;
+    transition: .5s;
+    position: relative;
+}
+.header-menu .right .menu li a:hover{
+    color: #000;
+}
+.header-menu .right .menu li a:before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #3070D4;
+    left: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition: .5s;
+}
+
+.header-menu .right .menu li a:hover:before{
+    transform: scale(1);
+}
+/*FIN NAV*/
+/*HEADER CONTENT*/
+.header-content {
+    width: 700px;
+    /* background: #2f2591; */
+    margin-top: 150px;
+}
+.header-content h1{
+    font-size: 70px;
+    line-height: 90px;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+.header-content > span{
+    display: block;
+    color: #726B8C;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    margin-bottom: 100px;
+}
+.btn-cta{
+    background: #3070D4;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    padding-right: 60px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: .5s;
+    position: relative;
+}
+.btn-cta:hover{
+    background: #2663c4;
+}
+.btn-cta::after{
+    content: "\f061";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 700; 
+    margin-left: 20px;
+    position: absolute;
+}
+
+.btn-cta:hover::after{
+    animation: animation-select-button 1.5s ease infinite;
+}
+@keyframes animation-select-button {
+    0%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/*FIN HEADER CONTENT*/
+/*MAIN*/
+.main{
+    width: 100%;
+    max-width: 1440px;
+    overflow: hidden;    
+}
+.main h2{
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+.main span.subtitle{
+    display: block;
+    font-size: 22px;
+    width: 700px;
+    text-align: center;
+    line-height: 32px;
+}
+.main .wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 5%;
+}
+.main .row{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.main .row .column{
+    width: 28%;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.how-it-works{
+    background: #f5f5f9;
+    backdrop-filter: blur(15px);
+}
+.how-it-works .activities .card img{
+    border-radius: 20px;
+    height: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    transition: .5s;
+}
+.how-it-works .activities .card:hover img{
+    transform: translateY(-10px);
+}
+.how-it-works .activities .card h3{
+    font-size: 25px;
+    color: #726B8C;
+    line-height: 28px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    margin: 0;
+    margin-top: 20px;
+    transition: .5s;
+}
+.how-it-works .activities .card:hover h3{
+    color: #000;
+}
+.how-it-works .activities .card p{
+    display: block;
+    font-size: 18px;
+    text-align: center;
+}
+.testimonials{
+    padding: 50px 0;
+    background: linear-gradient(0deg, rgba(255, 204, 0, 0.5) 0%, rgba(255, 255, 255, 0.15));
+}
+.testimonials .card{
+    background: #fff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-bottom: 15px solid #726B8C;
+    height: 180px;
+    justify-content: space-between;
+}
+.testimonials .card span{
+    display: block;
+}
+.testimonials .card .name{
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.testimonials .row{
+    margin-bottom: 50px;
+}
+.testimonials .clients{
+    width: 700px;
+}
+.testimonials .clients img{
+    filter: grayscale(100%) contrast(0%);
+    transition: .5s;
+    max-height: 70px;
+}
+.testimonials .clients .column img:last-child{
+    max-height: 50px;
+}
+.testimonials .clients .column:hover img{
+    filter: grayscale(0) contrast(100%);
+}
+.tools{
+    background: #3B496B;
+}
+/*FIN MAIN*/
